@@ -393,7 +393,7 @@ function drawTypingText() {
   rect(width / 2, height / 2, width, height);
 
   // Define the text box width and height based on the canvas size
-  let textBoxWidth = width * 0.3; // You can adjust this value
+  let textBoxWidth = width * 0.8; // You can adjust this value
   let textBoxHeight = height * 0.8; // You can adjust this value
 
   // Then, draw the white text on top of the black background
