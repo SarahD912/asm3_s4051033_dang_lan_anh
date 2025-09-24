@@ -4,7 +4,7 @@ let threadWidth = 150; // New variable for thread image width
 let threadHeight = 150; // New variable for thread image height
 let circleCount = 7;
 let circleDiameter = 100;
-let squareVerticalOffset = 150;
+let squareVerticalOffset = 170;
 let archVerticalOffset = 150;
 let wireLength = 300;
 let archRadius = 430;
@@ -71,6 +71,9 @@ let aspectRatio = initialRectWidth / initialRectHeight;
 let glowAmount = 30; // Amount of blur for the glow effect
 let glowColor = "white"; // Color of the glow effect
 
+// Variable for the font
+let customFont;
+
 // NEW: Variables for the typing text effect
 let typingText =
   "As you carefully go through the establishment in your mind, each step must have felt heavy, and sometimes, unsure. But don't worry, even at the worst scenario, when things don't turn out the way you want, you can always do it again, just like how you can always hit the refresh button and go again. \n\nYou can either made the same choice and restart the, \nwhy am I choosing this again? or you can choose a new one. Either way, remember, just like this project, you have to walk through everything. \n\nBelieve in yourself and your hands.";
@@ -94,6 +97,7 @@ function preload() {
   threadImage = loadImage("thread.png");
   noiseVideo = createVideo(["noise.mp4"]);
   menuButtonImage = loadImage("btn.png");
+  customFont = loadFont('Jersey10-Regular.ttf');
 }
 
 function setup() {
@@ -140,6 +144,8 @@ function setup() {
   // NEW: Initialize glowing rectangle position
   glowingRectX = width / 2;
   glowingRectY = height / 2;
+
+  textFont(customFont);
 }
 
 function draw() {
@@ -302,7 +308,7 @@ function drawMenuContent() {
   textAlign(CENTER, CENTER);
 
   // A helper variable to manage vertical spacing easily
-  let currentY = height / 2 - 250;
+  let currentY = height / 2 - 290;
 
   // 1. Menu heading
   textSize(32);
